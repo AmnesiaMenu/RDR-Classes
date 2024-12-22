@@ -41,7 +41,7 @@ namespace rage
 		template<typename T>
 		inline T* As()
 		{
-			return T*(this);
+			return static_cast<T*>(this);
 		}
 	};
 	static_assert(sizeof(rage::rlScSessionEvent) == 0x10);
