@@ -61,7 +61,7 @@ namespace rage
 		{
 			scrVector vec;
 			if (other == 0.f) {
-				return this;
+				return *this;
 			}
 			vec.x = this->x / other;
 			vec.y = this->y / other;
