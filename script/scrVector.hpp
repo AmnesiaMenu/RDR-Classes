@@ -57,6 +57,18 @@ namespace rage
 			return vec;
 		}
 
+		scrVector operator/(const float& other)
+		{
+			scrVector vec;
+			if (other == 0.f) {
+				return this;
+			}
+			vec.x = this->x / other;
+			vec.y = this->y / other;
+			vec.z = this->z / other;
+			return vec;
+		}
+
 		bool operator==(const scrVector& other)
 		{
 			return this->x == other.x && this->y == other.y && this->z == other.z;
